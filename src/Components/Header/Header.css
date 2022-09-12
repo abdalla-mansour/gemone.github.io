@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;400&display=swap');
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+.logo {
+    width: 7rem;
+    height: 2rem;
+}
+.header-menu {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+    color: white;
+    font-size: 12px;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+.header-menu > li {
+    transition: .75s;
+}
+.header-menu > li:hover {
+    cursor: pointer;
+    color: var(--orange);
+}
+@media screen and (max-width: 768px) {
+    .header > :nth-child(2) {
+        position: fixed;
+        right: 2rem;
+        z-index: 99;
+    }
+    .header-menu {
+        flex-direction: column;
+        background-color: var(--appColor);
+        padding: 2rem;
+    }
+}
